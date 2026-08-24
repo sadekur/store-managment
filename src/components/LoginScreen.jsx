@@ -127,7 +127,7 @@ const LoginScreen = () => {
         {/* Footer - Optional responsive footer */}
         <div className="mt-4 xs:mt-6 sm:mt-8 text-center">
           <p className="text-xs sm:text-sm text-gray-500">
-            Secure admin access for foundation management
+            Secure admin access for store management
           </p>
         </div>
       </div>
