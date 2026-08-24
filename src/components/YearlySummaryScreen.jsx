@@ -344,7 +344,7 @@ return (
               {/* Mobile Card View */}
               <div className="block sm:hidden">
                 <div className="divide-y divide-gray-200">
-                  {filteredData.map((item, index) => (
+                  {filteredData.map((item) => (
                     <div key={`${item.project}-${item.year}`} className="p-4 space-y-3">
                       <div className="flex justify-between items-start">
                         <div className="font-medium text-gray-900 text-sm">{item.project}</div>
