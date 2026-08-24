@@ -60,7 +60,7 @@ const AddProjectModal = ({
           <div className="flex gap-3">
             <button
               type="submit"
-              className="flex-1 bg-gradient-to-r from-indigo-600 to-violet-600 text-white p-3 rounded-lg hover:from-indigo-700 hover:to-violet-700 transition-colors"
+              className="flex-1 bg-teal-600 text-white p-3 rounded-lg hover:bg-teal-700 transition-colors"
             >
               Add Project
             </button>
