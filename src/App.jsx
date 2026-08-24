@@ -70,7 +70,7 @@ const FoundationApp = () => {
             setLoading(false);
 
             if (user) {
-                const foundationDocRef = doc(db, 'foundations', 'as-salsabil');
+                const foundationDocRef = doc(db, 'stores', 'main-store');
 
                 unsubscribeData = onSnapshot(foundationDocRef, (docSnap) => {
                     if (docSnap.exists()) {
@@ -122,7 +122,7 @@ const FoundationApp = () => {
 
     const saveToFirebase = async (updatedProjects) => {
         try {
-            const foundationDocRef = doc(db, 'foundations', 'as-salsabil');
+            const foundationDocRef = doc(db, 'stores', 'main-store');
             await setDoc(foundationDocRef, {
                 projects: updatedProjects,
                 lastUpdated: new Date().toISOString()
