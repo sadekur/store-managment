@@ -109,12 +109,7 @@ const YearlySummaryScreen = ({
   const allYears = [...new Set(summaryData.map(item => item.year))].sort((a, b) => b - a);
   const allProjects = [...new Set(summaryData.map(item => item.project))].sort();
 
-  const formatCurrency = (amount) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD'
-    }).format(amount);
-  };
+  const formatCurrency = (amount) => formatCurrencyBase(amount);
 
 return (
     <div className="min-h-screen bg-gray-50">
