@@ -112,13 +112,13 @@ const ProjectControls = ({
           <button
             onClick={onShowYearlySummary}
             className="flex items-center justify-center xs:justify-start gap-2
-                      bg-violet-600 text-white
+                      bg-amber-600 text-white
                       px-3 xs:px-4 sm:px-5 py-2 xs:py-2.5
                       text-sm xs:text-base font-medium
                       rounded-md xs:rounded-lg
-                      hover:bg-violet-700 active:bg-violet-800
+                      hover:bg-amber-700 active:bg-amber-800
                       transition-all duration-200 ease-in-out
-                      focus:outline-none focus:ring-4 focus:ring-violet-500 focus:ring-opacity-50
+                      focus:outline-none focus:ring-4 focus:ring-amber-500 focus:ring-opacity-50
                       transform hover:scale-105 active:scale-95
                       shadow-sm hover:shadow-md
                       min-h-[40px] xs:min-h-[44px]"
