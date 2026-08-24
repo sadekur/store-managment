@@ -1,24 +1,23 @@
 import { ArrowLeft, Calendar } from "lucide-react";
 import { useState } from "react";
+import { formatCurrency as formatCurrencyBase } from '../utils/format';
+import { getProjectYearKeys } from '../utils/projectStats';
 
 
-const YearlySummaryScreen = ({ 
-  projects, 
-  onBack 
+const YearlySummaryScreen = ({
+  projects,
+  onBack
 }) => {
   const [selectedProject, setSelectedProject] = useState('all');
   const [selectedYear, setSelectedYear] = useState('all');
 
   const calculateYearlySummaryData = () => {
     const summaryData = [];
-    
+
     Object.keys(projects).forEach(projectName => {
       const project = projects[projectName];
-      const allYears = new Set([
-        ...Object.keys(project.income || {}),
-        ...Object.keys(project.expenses || {})
-      ]);
-      
+      const allYears = getProjectYearKeys(project);
+
       allYears.forEach(year => {
         const incomeData = project.income?.[year] || {};
         const expenseData = project.expenses?.[year] || {};
