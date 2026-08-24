@@ -1,7 +1,3 @@
-// // salsabilfoubdtion@gmail.com
-// shadekur.rahman60@gmail.com pass: 111111
-// salsabilfoubdtion@gmail.com pass: 111111
-// databaseURL: "https://as-salsabil-foundation-default-rtdb.firebaseio.com",
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
