@@ -7,6 +7,7 @@ import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
+  //https://console.firebase.google.com/u/4/project/store-managment-system-d0019/overview
   apiKey: "AIzaSyCwKzDLzmmeAkfh2N4BgX6m11eDIGYKe0I",
   authDomain: "store-managment-system-d0019.firebaseapp.com",
   projectId: "store-managment-system-d0019",
