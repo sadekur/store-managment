@@ -7,14 +7,13 @@ import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  // Replace with your actual Firebase config
-  apiKey: "AIzaSyCCKkFADRBxCntebH1isPYrKrHB0qpN26I",
-  authDomain: "as-salsabil-foundation.firebaseapp.com",
-  projectId: "as-salsabil-foundation",
-  storageBucket: "as-salsabil-foundation.firebasestorage.app",
-  messagingSenderId: "589960728860",
-  appId: "1:589960728860:web:49ada3445fdbcf92672ad9",
-  // measurementId: "G-3SY22ZVD2Z"
+  apiKey: "AIzaSyCwKzDLzmmeAkfh2N4BgX6m11eDIGYKe0I",
+  authDomain: "store-managment-system-d0019.firebaseapp.com",
+  projectId: "store-managment-system-d0019",
+  storageBucket: "store-managment-system-d0019.firebasestorage.app",
+  messagingSenderId: "304010652482",
+  appId: "1:304010652482:web:c78cc27fa1de88f164b6db",
+  // measurementId: "G-9M0S35D9MV"
 };
 
 const app = initializeApp(firebaseConfig);
