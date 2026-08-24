@@ -332,7 +332,7 @@ const StoreManagementApp = () => {
                                     </span>
                                 </div>
                                 <div className="flex flex-col space-y-1">
-                                    <span className="text-blue-600 font-medium">Total Expenses:</span>
+                                    <span className="text-teal-600 font-medium">Total Expenses:</span>
                                     <span className="text-red-600 font-bold text-base lg:text-lg">
                                         ${projectTotals.totalExpenses.toLocaleString()}
                                     </span>
