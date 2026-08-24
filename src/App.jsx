@@ -29,7 +29,7 @@ import YearlySummaryScreen from './components/YearlySummaryScreen';
 // import { getDocs, collection } from "firebase/firestore";
 
 // async function exportFirestore() {
-//   const snapshot = await getDocs(collection(db, "foundations"));
+//   const snapshot = await getDocs(collection(db, "stores"));
 
 //   const data = snapshot.docs.map(doc => ({
 //     id: doc.id,
