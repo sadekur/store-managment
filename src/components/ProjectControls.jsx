@@ -48,7 +48,7 @@ const ProjectControls = ({
               onChange={(e) => setCurrentProject(e.target.value)}
               className="w-full p-2 xs:p-2.5 sm:p-3 text-sm xs:text-base
                         border border-gray-300 rounded-md xs:rounded-lg 
-                        focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500
+                        focus:ring-2 focus:ring-teal-500 focus:border-teal-500
                         transition-all duration-200 hover:border-gray-400"
             >
               <option value="">Select a project</option>
@@ -82,7 +82,7 @@ const ProjectControls = ({
               onChange={(e) => setSelectedYear(Number(e.target.value))}
               className="w-full p-2 xs:p-2.5 sm:p-3 text-sm xs:text-base
                         border border-gray-300 rounded-md xs:rounded-lg 
-                        focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500
+                        focus:ring-2 focus:ring-teal-500 focus:border-teal-500
                         transition-all duration-200 hover:border-gray-400
                         disabled:bg-gray-50 disabled:cursor-not-allowed"
               disabled={!currentProject}
