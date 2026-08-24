@@ -348,7 +348,7 @@ const StoreManagementApp = () => {
                             {/* Mobile Layout (Stacked) */}
                             <div className="sm:hidden space-y-3">
                                 <div className="flex justify-between items-center border-b border-blue-200 pb-2">
-                                    <span className="text-blue-600 font-medium text-sm">Total Income:</span>
+                                    <span className="text-teal-600 font-medium text-sm">Total Income:</span>
                                     <span className="text-green-600 font-bold text-base">
                                         ${projectTotals.totalIncome.toLocaleString()}
                                     </span>
