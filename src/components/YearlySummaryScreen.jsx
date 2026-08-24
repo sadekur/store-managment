@@ -121,7 +121,7 @@ return (
               <button
                 onClick={onBack}
                 className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors 
-                          p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500
+                          p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500
                           w-fit"
               >
                 <ArrowLeft size={16} className="xs:w-5 xs:h-5" />
