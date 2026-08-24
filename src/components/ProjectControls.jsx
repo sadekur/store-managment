@@ -132,13 +132,13 @@ const ProjectControls = ({
           <button
             onClick={onAddProject}
             className="flex items-center justify-center xs:justify-start gap-2
-                      bg-gradient-to-r from-indigo-600 to-violet-600 text-white
+                      bg-teal-600 text-white
                       px-3 xs:px-4 sm:px-5 py-2 xs:py-2.5
                       text-sm xs:text-base font-medium
                       rounded-md xs:rounded-lg
-                      hover:from-indigo-700 hover:to-violet-700 active:from-indigo-800 active:to-violet-800
+                      hover:bg-teal-700 active:bg-teal-800
                       transition-all duration-200 ease-in-out
-                      focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50
+                      focus:outline-none focus:ring-4 focus:ring-teal-500 focus:ring-opacity-50
                       transform hover:scale-105 active:scale-95
                       shadow-sm hover:shadow-md
                       min-h-[40px] xs:min-h-[44px]"
