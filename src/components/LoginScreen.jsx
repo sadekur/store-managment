@@ -101,11 +101,11 @@ const LoginScreen = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-indigo-600 text-white 
-                       p-2.5 xs:p-3 sm:p-3.5 
+            className="w-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white
+                       p-2.5 xs:p-3 sm:p-3.5
                        text-sm xs:text-base sm:text-lg font-medium
-                       rounded-md xs:rounded-lg 
-                       hover:bg-indigo-700 active:bg-indigo-800
+                       rounded-md xs:rounded-lg
+                       hover:from-indigo-700 hover:to-violet-700 active:from-indigo-800 active:to-violet-800
                        transition-all duration-200 ease-in-out
                        disabled:opacity-50 disabled:cursor-not-allowed
                        focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50
