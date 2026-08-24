@@ -429,4 +429,4 @@ const StoreManagementApp = () => {
     );
 };
 
-export default FoundationApp;
+export default StoreManagementApp;
