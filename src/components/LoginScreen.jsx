@@ -52,7 +52,7 @@ const LoginScreen = () => {
               onChange={(e) => setEmail(e.target.value)}
               className="w-full p-2 xs:p-3 sm:p-3.5 border border-gray-300 rounded-md xs:rounded-lg 
                          text-sm xs:text-base
-                         focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 
+                         focus:ring-2 focus:ring-teal-500 focus:border-teal-500
                          transition-all duration-200 ease-in-out
                          hover:border-gray-400"
               placeholder="Enter admin email"
@@ -72,7 +72,7 @@ const LoginScreen = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full p-2 xs:p-3 sm:p-3.5 pr-10 xs:pr-12 border border-gray-300 rounded-md xs:rounded-lg 
                            text-sm xs:text-base
-                           focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 
+                           focus:ring-2 focus:ring-teal-500 focus:border-teal-500
                            transition-all duration-200 ease-in-out
                            hover:border-gray-400"
                 placeholder="Enter password"
