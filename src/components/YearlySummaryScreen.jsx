@@ -56,11 +56,8 @@ const YearlySummaryScreen = ({
     
     Object.keys(projects).forEach(projectName => {
       const project = projects[projectName];
-      const allYears = new Set([
-        ...Object.keys(project.income || {}),
-        ...Object.keys(project.expenses || {})
-      ]);
-      
+      const allYears = getProjectYearKeys(project);
+
       let totalIncome = 0;
       let totalExpenses = 0;
       let totalIncomeTransactions = 0;
