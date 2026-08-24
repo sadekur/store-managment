@@ -151,6 +151,45 @@ const StoreManagementApp = () => {
         }
     };
 
+    const renameProject = async (oldName, newNameRaw) => {
+        const newName = newNameRaw.trim();
+        if (!newName || newName === oldName) {
+            setShowEditProject(false);
+            return;
+        }
+        if (projects[newName]) {
+            alert('A project with this name already exists');
+            return;
+        }
+
+        const updatedProjects = { ...projects };
+        updatedProjects[newName] = updatedProjects[oldName];
+        delete updatedProjects[oldName];
+
+        setProjects(updatedProjects);
+        await saveToFirebase(updatedProjects);
+
+        if (currentProject === oldName) {
+            setCurrentProject(newName);
+        }
+        setShowEditProject(false);
+        setEditProjectName('');
+    };
+
+    const deleteProject = async (projectName) => {
+        const updatedProjects = { ...projects };
+        delete updatedProjects[projectName];
+
+        setProjects(updatedProjects);
+        await saveToFirebase(updatedProjects);
+
+        if (currentProject === projectName) {
+            setCurrentProject('');
+            setSelectedYear(new Date().getFullYear());
+        }
+        setShowDeleteProjectConfirm(false);
+    };
+
     const addTransaction = async (type) => {
         if (!transactionForm.date || !transactionForm.donor || !transactionForm.amount) {
             alert('Please fill all fields');
