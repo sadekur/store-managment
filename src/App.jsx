@@ -326,7 +326,7 @@ const StoreManagementApp = () => {
                             {/* Desktop Layout (3 columns) */}
                             <div className="hidden sm:grid sm:grid-cols-3 gap-4 text-sm">
                                 <div className="flex flex-col space-y-1">
-                                    <span className="text-blue-600 font-medium">Total Income:</span>
+                                    <span className="text-teal-600 font-medium">Total Income:</span>
                                     <span className="text-green-600 font-bold text-base lg:text-lg">
                                         ${projectTotals.totalIncome.toLocaleString()}
                                     </span>
