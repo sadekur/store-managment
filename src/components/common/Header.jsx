@@ -29,7 +29,7 @@ const Header = ({ user, setLoading }) => {
           <div className="flex-1 min-w-0">
             <h1 className="text-lg xs:text-xl sm:text-2xl lg:text-3xl font-bold text-indigo-800 
                            leading-tight truncate">
-              As-Salsabil Foundation
+              Store Managment System
             </h1>
             
             {/* User Info - Responsive Display */}
