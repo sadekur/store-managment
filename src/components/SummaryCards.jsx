@@ -127,36 +127,6 @@ return (
         </div>
       </div>
     </div>
-
-    {/* Tablet-Only Performance Indicator */}
-    {/* <div className="hidden xs:block lg:hidden col-span-2">
-      <div className="bg-gray-50 rounded-lg p-4 border-2 border-dashed border-gray-200">
-        <div className="flex items-center justify-between">
-          <div>
-            <h4 className="text-sm font-medium text-gray-700 mb-1">
-              Financial Performance ({year})
-            </h4>
-            <p className="text-xs text-gray-600">
-              {balance > 0 
-                ? `Positive cash flow of ${formatCurrency(balance)}` 
-                : balance < 0 
-                ? `Cash deficit of ${formatCurrency(Math.abs(balance))}` 
-                : 'Balanced budget achieved'
-              }
-            </p>
-          </div>
-          <div className={`px-3 py-1 rounded-full text-xs font-medium ${
-            balance > 0 
-              ? 'bg-green-100 text-green-800' 
-              : balance < 0 
-              ? 'bg-red-100 text-red-800' 
-              : 'bg-yellow-100 text-yellow-800'
-          }`}>
-            {balance > 0 ? 'Surplus' : balance < 0 ? 'Deficit' : 'Balanced'}
-          </div>
-        </div>
-      </div>
-    </div> */}
   </div>
 );
 };
