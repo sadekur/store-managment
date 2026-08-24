@@ -42,7 +42,7 @@ import { getProjectYears, calculateTotals, calculateProjectTotals, getAvailableY
 // }
 
 // exportFirestore();
-const FoundationApp = () => {
+const StoreManagementApp = () => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const [currentProject, setCurrentProject] = useState('');
