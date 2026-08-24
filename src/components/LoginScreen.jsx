@@ -31,7 +31,7 @@ const LoginScreen = () => {
         {/* Header - Responsive text sizes */}
         <div className="text-center mb-4 xs:mb-6 sm:mb-8">
           <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-indigo-800 mb-1 xs:mb-2 leading-tight">
-            As-Salsabil Foundation
+            Store Managment System
           </h1>
           <p className="text-xs xs:text-sm sm:text-base text-gray-600">
             Admin Access System
