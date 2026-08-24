@@ -209,7 +209,7 @@ return (
           </div>
           <div className="bg-white rounded-lg shadow-sm p-3 xs:p-4 sm:p-6 xs:col-span-2 sm:col-span-3 lg:col-span-1">
             <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2">Total Transactions</h3>
-            <p className="text-lg xs:text-xl sm:text-2xl font-bold text-purple-600">
+            <p className="text-lg xs:text-xl sm:text-2xl font-bold text-amber-600">
               {grandTotals.transactions}
             </p>
           </div>
