@@ -1,16 +1,16 @@
 // src/App.js
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 // Import Firebase functions
 import { auth, db } from './firebase';
-import {  
-  onAuthStateChanged 
+import {
+  onAuthStateChanged
 } from 'firebase/auth';
-import { 
-  doc, 
-  setDoc, 
-  onSnapshot 
+import {
+  doc,
+  setDoc,
+  onSnapshot
 } from 'firebase/firestore';
 
 // Import components
@@ -25,6 +25,7 @@ import TransactionSection from './components/TransactionSection';
 import AddProjectModal from './components/common/AddProjectModal';
 import TransactionFormModal from './components/TransactionFormModal';
 import YearlySummaryScreen from './components/YearlySummaryScreen';
+import { getProjectYears, calculateTotals, calculateProjectTotals, getAvailableYears } from './utils/projectStats';
 
 // import { getDocs, collection } from "firebase/firestore";
 
