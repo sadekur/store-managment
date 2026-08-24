@@ -354,7 +354,7 @@ const StoreManagementApp = () => {
                                     </span>
                                 </div>
                                 <div className="flex justify-between items-center border-b border-teal-200 pb-2">
-                                    <span className="text-blue-600 font-medium text-sm">Total Expenses:</span>
+                                    <span className="text-teal-600 font-medium text-sm">Total Expenses:</span>
                                     <span className="text-red-600 font-bold text-base">
                                         ${projectTotals.totalExpenses.toLocaleString()}
                                     </span>
