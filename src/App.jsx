@@ -166,14 +166,17 @@ const StoreManagementApp = () => {
         updatedProjects[newName] = updatedProjects[oldName];
         delete updatedProjects[oldName];
 
+        // Update projects and currentProject together (before the await) so
+        // there's never a render where currentProject points at a key that
+        // no longer exists in projects.
         setProjects(updatedProjects);
-        await saveToFirebase(updatedProjects);
-
         if (currentProject === oldName) {
             setCurrentProject(newName);
         }
         setShowEditProject(false);
         setEditProjectName('');
+
+        await saveToFirebase(updatedProjects);
     };
 
     const deleteProject = async (projectName) => {
@@ -181,13 +184,13 @@ const StoreManagementApp = () => {
         delete updatedProjects[projectName];
 
         setProjects(updatedProjects);
-        await saveToFirebase(updatedProjects);
-
         if (currentProject === projectName) {
             setCurrentProject('');
             setSelectedYear(new Date().getFullYear());
         }
         setShowDeleteProjectConfirm(false);
+
+        await saveToFirebase(updatedProjects);
     };
 
     const addTransaction = async (type) => {
