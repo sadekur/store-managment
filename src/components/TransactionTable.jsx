@@ -68,7 +68,7 @@ const TransactionTable = ({
               Date
             </th>
             <th className="text-left p-1.5 xs:p-2 sm:p-3 font-medium text-gray-700 text-xs xs:text-sm">
-              {type === "income" ? "Donor" : "Description"}
+              {type === "income" ? "Customer" : "Description"}
             </th>
             <th className="text-left p-1.5 xs:p-2 sm:p-3 font-medium text-gray-700 text-xs xs:text-sm">
               Amount (৳)
