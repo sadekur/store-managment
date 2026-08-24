@@ -318,8 +318,8 @@ const StoreManagementApp = () => {
                         </div>
 
                         {/* Project Total Summary (All Years) - Responsive */}
-                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 xs:p-4 sm:p-6 mb-4 sm:mb-6 overflow-x-auto">
-                            <h3 className="text-sm sm:text-base font-medium text-blue-800 mb-3 sm:mb-4">
+                        <div className="bg-teal-50 border border-teal-200 rounded-lg p-3 xs:p-4 sm:p-6 mb-4 sm:mb-6 overflow-x-auto">
+                            <h3 className="text-sm sm:text-base font-medium text-teal-800 mb-3 sm:mb-4">
                                 "{currentProject}" (All Years: {projectTotals.years.join(', ') || 'No data'})
                             </h3>
                             
