@@ -34,7 +34,7 @@ const TransactionSection = ({
     const query = searchQuery.toLowerCase();
     return sortedTransactions.filter(transaction => {
       const date = new Date(transaction.date).toLocaleDateString('en-BD').toLowerCase();
-      const donor = transaction.donor.toLowerCase();
+      const donor = (transaction.donor || '').toLowerCase();
       const amount = transaction.amount.toString();
       
       return date.includes(query) || donor.includes(query) || amount.includes(query);
