@@ -43,13 +43,13 @@ const TransactionFormModal = ({
           
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              {isIncome ? 'Donor' : 'Expense For'}
+              {isIncome ? 'Customer' : 'Expense For'}
             </label>
             <input
               type="text"
               value={formData.donor}
               onChange={(e) => handleInputChange('donor', e.target.value)}
-              placeholder={isIncome ? "Enter donor name" : "Enter expense description"}
+              placeholder={isIncome ? "Enter customer name" : "Enter expense description"}
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
               required
             />
