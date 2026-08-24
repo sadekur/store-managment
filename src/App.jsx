@@ -338,7 +338,7 @@ const StoreManagementApp = () => {
                                     </span>
                                 </div>
                                 <div className="flex flex-col space-y-1">
-                                    <span className="text-blue-600 font-medium">Net Balance:</span>
+                                    <span className="text-teal-600 font-medium">Net Balance:</span>
                                     <span className={`font-bold text-base lg:text-lg ${projectTotals.balance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                                         ${projectTotals.balance.toLocaleString()}
                                     </span>
