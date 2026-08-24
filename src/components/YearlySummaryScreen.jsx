@@ -137,7 +137,7 @@ return (
                 <span className="text-sm xs:text-base">Back to Dashboard</span>
               </button>
               <h1 className="text-lg xs:text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
-                Foundation Yearly Summary
+                Store Yearly Summary
               </h1>
             </div>
           </div>
