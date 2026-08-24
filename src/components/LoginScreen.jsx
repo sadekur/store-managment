@@ -86,7 +86,7 @@ const LoginScreen = () => {
                            text-gray-400 hover:text-gray-600 
                            transition-colors duration-200
                            p-1 rounded-full hover:bg-gray-100
-                           focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
+                           focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50"
                 aria-label={showPassword ? "Hide password" : "Show password"}
               >
                 {showPassword ? 
