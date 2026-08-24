@@ -52,7 +52,7 @@ const Header = ({ user, setLoading }) => {
                          p-2 xs:p-2.5 sm:p-3
                          rounded-md xs:rounded-lg 
                          hover:bg-gray-100 active:bg-gray-200
-                         focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50
+                         focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50
                          transform hover:scale-105 active:scale-95
                          text-sm xs:text-base font-medium
                          border border-transparent hover:border-gray-200
