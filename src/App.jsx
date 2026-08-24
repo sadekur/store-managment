@@ -71,9 +71,9 @@ const StoreManagementApp = () => {
             setLoading(false);
 
             if (user) {
-                const foundationDocRef = doc(db, 'stores', 'main-store');
+                const storeDocRef = doc(db, 'stores', 'main-store');
 
-                unsubscribeData = onSnapshot(foundationDocRef, (docSnap) => {
+                unsubscribeData = onSnapshot(storeDocRef, (docSnap) => {
                     if (docSnap.exists()) {
                         const data = docSnap.data();
                         setProjects(data.projects || {});
