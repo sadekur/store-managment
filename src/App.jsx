@@ -110,21 +110,10 @@ const StoreManagementApp = () => {
         };
     }, []); // ← empty array: runs only once, no stale listeners
 
-    // Helper function to get all years for a project
-    const getProjectYears = (projectData) => {
-        if (!projectData) return [];
-        
-        const incomeYears = Object.keys(projectData.income || {}).map(Number);
-        const expenseYears = Object.keys(projectData.expenses || {}).map(Number);
-        const allYears = [...new Set([...incomeYears, ...expenseYears])];
-        
-        return allYears.sort((a, b) => b - a);
-    };
-
     const saveToFirebase = async (updatedProjects) => {
         try {
-            const foundationDocRef = doc(db, 'stores', 'main-store');
-            await setDoc(foundationDocRef, {
+            const storeDocRef = doc(db, 'stores', 'main-store');
+            await setDoc(storeDocRef, {
                 projects: updatedProjects,
                 lastUpdated: new Date().toISOString()
             }); // ← no merge:true — overwrites the document so deletes actually stick
