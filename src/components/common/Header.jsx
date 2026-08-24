@@ -27,7 +27,7 @@ const Header = ({ user, setLoading }) => {
           
           {/* Brand Section - Responsive Typography */}
           <div className="flex-1 min-w-0">
-            <h1 className="text-lg xs:text-xl sm:text-2xl lg:text-3xl font-bold text-indigo-800 
+            <h1 className="text-lg xs:text-xl sm:text-2xl lg:text-3xl font-bold text-teal-800
                            leading-tight truncate">
               Store Managment System
             </h1>
