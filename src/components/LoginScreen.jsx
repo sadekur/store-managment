@@ -24,7 +24,7 @@ const LoginScreen = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-violet-100 flex items-center justify-center p-3 xs:p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-cyan-100 flex items-center justify-center p-3 xs:p-4 sm:p-6 lg:p-8">
       {/* Login Card - Responsive width and spacing */}
       <div className="bg-white rounded-lg shadow-lg w-full max-w-xs xs:max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl p-4 xs:p-6 sm:p-8 lg:p-10">
         
