@@ -103,37 +103,6 @@ const ProjectControls = ({
             )}
           </div>
 
-          {/* Quick Year Navigation - Responsive */}
-          {/* {currentProject && projectInfo && projectInfo.years.length > 1 && (
-            <div className="w-full sm:w-auto sm:min-w-[200px]">
-              <label className="block text-xs xs:text-sm font-medium text-gray-700 mb-1 xs:mb-2">
-                Quick Navigation
-              </label>
-              <div className="flex gap-1 xs:gap-1.5 flex-wrap">
-                {projectInfo.years.slice(0, window.innerWidth < 640 ? 3 : 5).map(year => (
-                  <button
-                    key={year}
-                    onClick={() => setSelectedYear(year)}
-                    className={`px-2 xs:px-3 py-1 xs:py-1.5 text-xs xs:text-sm rounded-md border 
-                              transition-all duration-200 font-medium
-                              ${selectedYear === year 
-                                ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm' 
-                                : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400'
-                              }
-                              focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50`}
-                    aria-label={`Switch to year ${year}`}
-                  >
-                    {year}
-                  </button>
-                ))}
-                {projectInfo.years.length > (window.innerWidth < 640 ? 3 : 5) && (
-                  <span className="px-2 py-1 text-xs text-gray-500 self-center">
-                    +{projectInfo.years.length - (window.innerWidth < 640 ? 3 : 5)} more
-                  </span>
-                )}
-              </div>
-            </div>
-          )} */}
         </div>
 
         {/* Right Section - Action Buttons */}
