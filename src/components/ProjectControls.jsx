@@ -1,6 +1,6 @@
 // src/components/ProjectControls.js
 import React from 'react';
-import { BarChart3, Plus } from 'lucide-react';
+import { BarChart3, Plus, Pencil, Trash2 } from 'lucide-react';
 import { getProjectYearKeys } from '../utils/projectStats';
 
 const ProjectControls = ({
@@ -11,7 +11,9 @@ const ProjectControls = ({
   projects,
   availableYears,
   onAddProject,
-  onShowYearlySummary
+  onShowYearlySummary,
+  onEditProject,
+  onDeleteProject
 }) => {
   // Helper function to get project info
   const getProjectInfo = (projectName) => {
