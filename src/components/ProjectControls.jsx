@@ -68,8 +68,8 @@ const ProjectControls = ({
                               text-gray-500 hover:text-teal-600 hover:border-teal-400 hover:bg-teal-50
                               transition-all duration-200
                               focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50"
-                    aria-label="Edit project"
-                    title="Edit project"
+                    aria-label="Edit product"
+                    title="Edit product"
                   >
                     <Pencil size={16} />
                   </button>
