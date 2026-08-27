@@ -160,7 +160,7 @@ const ProjectControls = ({
             <span className="text-[12px] md:text-base">Yearly Summary</span>
           </button>
 
-          {/* Add Project Button */}
+          {/* Add Product Button */}
           <button
             onClick={onAddProject}
             className="flex items-center justify-center xs:justify-start gap-2
@@ -174,10 +174,10 @@ const ProjectControls = ({
                       transform hover:scale-105 active:scale-95
                       shadow-sm hover:shadow-md
                       min-h-[40px] xs:min-h-[44px]"
-            aria-label="Add new project"
+            aria-label="Add new product"
           >
             <Plus size={16} className="md:w-5 md:h-5 flex-shrink-0" />
-            <span className="text-[12px] md:text-base">Add Project</span>
+            <span className="text-[12px] md:text-base">Add Product</span>
           </button>
         </div>
       </div>
