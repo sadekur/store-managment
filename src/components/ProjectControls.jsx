@@ -43,7 +43,7 @@ const ProjectControls = ({
           {/* Project Selection */}
           <div className="flex-1 min-w-0 sm:min-w-[200px] lg:min-w-[250px]">
             <label className="block text-xs xs:text-sm font-medium text-gray-700 mb-1 xs:mb-2">
-              Current Project
+              Current Product
             </label>
             <div className="flex gap-1.5 xs:gap-2">
               <select
