@@ -91,7 +91,7 @@ const TransactionSection = ({
             className={`flex items-center gap-2 text-sm md:text-lg text-white px-[6px] py-2 md:px-4 md:py-2 rounded-lg transition-colors ${colorClasses[buttonColor]}`}
           >
             <Plus size={16} className="text-white" />
-            Add {title}
+            {addLabel || `Add ${title}`}
           </button>
         </div>
       </div>
