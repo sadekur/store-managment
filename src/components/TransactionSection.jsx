@@ -6,6 +6,7 @@ import TransactionTable from './TransactionTable';
 const TransactionSection = ({
   type,
   title,
+  addLabel,
   transactions,
   onDelete,
   onAddTransaction,
