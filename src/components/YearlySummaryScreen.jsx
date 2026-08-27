@@ -215,12 +215,12 @@ return (
           </div>
         </div>
 
-        {/* Project Totals Summary - Responsive Table */}
+        {/* Product Totals Summary - Responsive Table */}
         {selectedProject === 'all' && selectedYear === 'all' && (
           <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-6 xs:mb-8">
             <div className="px-3 xs:px-4 sm:px-6 py-3 xs:py-4 border-b border-gray-200">
               <h2 className="text-base xs:text-lg font-semibold text-gray-900">
-                Project Totals (All Years Combined)
+                Product Totals (All Years Combined)
               </h2>
             </div>
             
