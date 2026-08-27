@@ -80,8 +80,8 @@ const ProjectControls = ({
                               text-gray-500 hover:text-red-600 hover:border-red-400 hover:bg-red-50
                               transition-all duration-200
                               focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
-                    aria-label="Delete project"
-                    title="Delete project"
+                    aria-label="Delete product"
+                    title="Delete product"
                   >
                     <Trash2 size={16} />
                   </button>
