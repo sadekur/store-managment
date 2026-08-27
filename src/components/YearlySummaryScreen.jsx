@@ -143,17 +143,17 @@ return (
           <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 xs:gap-4 sm:items-end">
             <div className="flex-1 min-w-0 sm:min-w-[200px]">
               <label className="block text-xs xs:text-sm font-medium text-gray-700 mb-1 xs:mb-2">
-                Filter by Project
+                Filter by Product
               </label>
               <select
                 value={selectedProject}
                 onChange={(e) => setSelectedProject(e.target.value)}
                 className="w-full p-2 xs:p-2.5 sm:p-3 text-sm xs:text-base
-                          border border-gray-300 rounded-md xs:rounded-lg 
+                          border border-gray-300 rounded-md xs:rounded-lg
                           focus:ring-2 focus:ring-teal-500 focus:border-teal-500
                           transition-all duration-200"
               >
-                <option value="all">All Projects</option>
+                <option value="all">All Products</option>
                 {allProjects.map(project => (
                   <option key={project} value={project}>{project}</option>
                 ))}
