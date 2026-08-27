@@ -62,7 +62,7 @@ const AddProjectModal = ({
               type="submit"
               className="flex-1 bg-teal-600 text-white p-3 rounded-lg hover:bg-teal-700 transition-colors"
             >
-              Add Project
+              Add Product
             </button>
             <button
               type="button"
