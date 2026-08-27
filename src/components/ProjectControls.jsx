@@ -54,7 +54,7 @@ const ProjectControls = ({
                           focus:ring-2 focus:ring-teal-500 focus:border-teal-500
                           transition-all duration-200 hover:border-gray-400"
               >
-                <option value="">Select a project</option>
+                <option value="">Select a product</option>
                 {Object.keys(projects).map(project => (
                   <option key={project} value={project}>{project}</option>
                 ))}
