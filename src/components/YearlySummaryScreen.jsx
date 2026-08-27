@@ -321,12 +321,12 @@ return (
             <h2 className="text-base xs:text-lg font-semibold text-gray-900">
               {selectedProject !== 'all' || selectedYear !== 'all' 
                 ? `Filtered Results` 
-                : 'Project-wise Yearly Summary'
+                : 'Product-wise Yearly Summary'
               }
             </h2>
             {(selectedProject !== 'all' || selectedYear !== 'all') && (
               <p className="text-xs xs:text-sm text-gray-600 mt-1">
-                {selectedProject !== 'all' && `Project: ${selectedProject}`}
+                {selectedProject !== 'all' && `Product: ${selectedProject}`}
                 {selectedProject !== 'all' && selectedYear !== 'all' && ' • '}
                 {selectedYear !== 'all' && `Year: ${selectedYear}`}
               </p>
