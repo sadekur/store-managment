@@ -61,7 +61,7 @@ const TransactionFormModal = ({
               type="number"
               value={formData.amount}
               onChange={(e) => handleInputChange('amount', e.target.value)}
-              placeholder="Enter amount"
+              placeholder="Enter Quantity"
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
               min="0"
               step="0.01"
