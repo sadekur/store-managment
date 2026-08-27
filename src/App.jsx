@@ -445,6 +445,7 @@ const StoreManagementApp = () => {
                                 <TransactionSection
                                     type="income"
                                     title={`Income (${selectedYear})`}
+                                    addLabel={`Receive Product (${selectedYear})`}
                                     transactions={projects[currentProject]?.income?.[selectedYear.toString()] || {}}
                                     onDelete={(id) => deleteTransaction('income', id)}
                                     onAddTransaction={() => setShowIncomeForm(true)}
