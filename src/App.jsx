@@ -158,7 +158,7 @@ const StoreManagementApp = () => {
             return;
         }
         if (projects[newName]) {
-            alert('A project with this name already exists');
+            alert('A product with this name already exists');
             return;
         }
 
