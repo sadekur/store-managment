@@ -202,7 +202,7 @@ return (
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm p-3 xs:p-4 sm:p-6">
-            <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2">Total Projects</h3>
+            <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2">Total Products</h3>
             <p className="text-lg xs:text-xl sm:text-2xl font-bold text-teal-600">
               {Object.keys(projects).length}
             </p>
