@@ -18,15 +18,15 @@ const EditProjectModal = ({
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
       <div className="bg-white rounded-lg p-6 w-full max-w-md">
-        <h3 className="text-lg font-semibold mb-4">Edit Project</h3>
+        <h3 className="text-lg font-semibold mb-4">Edit Product</h3>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-2">Project Name</label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">Product Name</label>
             <input
               type="text"
               value={projectName}
               onChange={(e) => setProjectName(e.target.value)}
-              placeholder="Enter project name"
+              placeholder="Enter product name"
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
               autoFocus
               required
