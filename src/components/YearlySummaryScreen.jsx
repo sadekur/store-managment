@@ -352,15 +352,15 @@ return (
                       </div>
                       <div className="grid grid-cols-2 gap-3 text-xs">
                         <div>
-                          <span className="text-gray-500">Income:</span>
+                          <span className="text-gray-500">Receive:</span>
                           <div className="font-medium text-green-600">{formatQuantity(item.totalIncome)}</div>
                         </div>
                         <div>
-                          <span className="text-gray-500">Expenses:</span>
+                          <span className="text-gray-500">Issue:</span>
                           <div className="font-medium text-red-600">{formatQuantity(item.totalExpenses)}</div>
                         </div>
                         <div>
-                          <span className="text-gray-500">Balance:</span>
+                          <span className="text-gray-500">Stock:</span>
                           <div className={`font-medium ${item.balance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                             {formatQuantity(item.balance)}
                           </div>
