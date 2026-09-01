@@ -482,6 +482,9 @@ const StoreManagementApp = () => {
                     show={showAddProject}
                     projectName={newProjectName}
                     setProjectName={setNewProjectName}
+                    category={newProjectCategory}
+                    setCategory={setNewProjectCategory}
+                    existingCategories={existingCategories}
                     selectedYear={newProjectYear}
                     setSelectedYear={setNewProjectYear}
                     onAdd={addProject}
