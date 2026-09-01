@@ -105,6 +105,7 @@ const StoreManagementApp = () => {
                 });
             } else {
                 setProjects({});
+                setCategories([]);
                 setCurrentProject('');
                 if (unsubscribeData) {
                     unsubscribeData();
