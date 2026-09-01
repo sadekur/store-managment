@@ -186,19 +186,19 @@ return (
           <div className="bg-white rounded-lg shadow-sm p-3 xs:p-4 sm:p-6">
             <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2">Total Income</h3>
             <p className="text-lg xs:text-xl sm:text-2xl font-bold text-green-600 break-words">
-              {formatCurrency(grandTotals.income)}
+              {formatQuantity(grandTotals.income)}
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm p-3 xs:p-4 sm:p-6">
             <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2">Total Expenses</h3>
             <p className="text-lg xs:text-xl sm:text-2xl font-bold text-red-600 break-words">
-              {formatCurrency(grandTotals.expenses)}
+              {formatQuantity(grandTotals.expenses)}
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm p-3 xs:p-4 sm:p-6">
             <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2">Net Balance</h3>
             <p className={`text-lg xs:text-xl sm:text-2xl font-bold break-words ${grandTotals.balance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-              {formatCurrency(grandTotals.balance)}
+              {formatQuantity(grandTotals.balance)}
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm p-3 xs:p-4 sm:p-6">
@@ -241,16 +241,16 @@ return (
                       </div>
                       <div>
                         <span className="text-gray-500">Income:</span>
-                        <div className="font-medium text-green-600">{formatCurrency(totals.totalIncome)}</div>
+                        <div className="font-medium text-green-600">{formatQuantity(totals.totalIncome)}</div>
                       </div>
                       <div>
                         <span className="text-gray-500">Expenses:</span>
-                        <div className="font-medium text-red-600">{formatCurrency(totals.totalExpenses)}</div>
+                        <div className="font-medium text-red-600">{formatQuantity(totals.totalExpenses)}</div>
                       </div>
                       <div className="col-span-2">
                         <span className="text-gray-500">Net Balance:</span>
                         <div className={`font-medium text-base ${totals.balance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                          {formatCurrency(totals.balance)}
+                          {formatQuantity(totals.balance)}
                         </div>
                       </div>
                     </div>
@@ -294,14 +294,14 @@ return (
                         <div className="text-sm text-gray-900">{totals.years.join(', ') || 'No data'}</div>
                       </td>
                       <td className="px-3 sm:px-6 py-4">
-                        <div className="text-sm font-medium text-green-600">{formatCurrency(totals.totalIncome)}</div>
+                        <div className="text-sm font-medium text-green-600">{formatQuantity(totals.totalIncome)}</div>
                       </td>
                       <td className="px-3 sm:px-6 py-4">
-                        <div className="text-sm font-medium text-red-600">{formatCurrency(totals.totalExpenses)}</div>
+                        <div className="text-sm font-medium text-red-600">{formatQuantity(totals.totalExpenses)}</div>
                       </td>
                       <td className="px-3 sm:px-6 py-4">
                         <div className={`text-sm font-medium ${totals.balance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                          {formatCurrency(totals.balance)}
+                          {formatQuantity(totals.balance)}
                         </div>
                       </td>
                       <td className="px-3 sm:px-6 py-4">
@@ -353,16 +353,16 @@ return (
                       <div className="grid grid-cols-2 gap-3 text-xs">
                         <div>
                           <span className="text-gray-500">Income:</span>
-                          <div className="font-medium text-green-600">{formatCurrency(item.totalIncome)}</div>
+                          <div className="font-medium text-green-600">{formatQuantity(item.totalIncome)}</div>
                         </div>
                         <div>
                           <span className="text-gray-500">Expenses:</span>
-                          <div className="font-medium text-red-600">{formatCurrency(item.totalExpenses)}</div>
+                          <div className="font-medium text-red-600">{formatQuantity(item.totalExpenses)}</div>
                         </div>
                         <div>
                           <span className="text-gray-500">Balance:</span>
                           <div className={`font-medium ${item.balance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                            {formatCurrency(item.balance)}
+                            {formatQuantity(item.balance)}
                           </div>
                         </div>
                         <div>
@@ -410,14 +410,14 @@ return (
                           <div className="text-sm text-gray-900">{item.year}</div>
                         </td>
                         <td className="px-3 sm:px-6 py-4">
-                          <div className="text-sm font-medium text-green-600">{formatCurrency(item.totalIncome)}</div>
+                          <div className="text-sm font-medium text-green-600">{formatQuantity(item.totalIncome)}</div>
                         </td>
                         <td className="px-3 sm:px-6 py-4">
-                          <div className="text-sm font-medium text-red-600">{formatCurrency(item.totalExpenses)}</div>
+                          <div className="text-sm font-medium text-red-600">{formatQuantity(item.totalExpenses)}</div>
                         </td>
                         <td className="px-3 sm:px-6 py-4">
                           <div className={`text-sm font-medium ${item.balance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                            {formatCurrency(item.balance)}
+                            {formatQuantity(item.balance)}
                           </div>
                         </td>
                         <td className="px-3 sm:px-6 py-4">
