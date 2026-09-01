@@ -174,32 +174,50 @@ const StoreManagementApp = () => {
         await saveToFirebase(projects, updatedCategories);
     };
 
-    const renameProject = async (oldName, newNameRaw) => {
+    const renameProject = async (oldName, newNameRaw, newCategoryRaw) => {
         const newName = newNameRaw.trim();
-        if (!newName || newName === oldName) {
+        const newCategory = (newCategoryRaw || '').trim();
+        if (!newName) {
             setShowEditProject(false);
             return;
         }
-        if (projects[newName]) {
+
+        const existingCategory = projects[oldName]?.category || '';
+        if (newName === oldName && newCategory === existingCategory) {
+            setShowEditProject(false);
+            return;
+        }
+        if (newName !== oldName && projects[newName]) {
             alert('A product with this name already exists');
             return;
         }
 
         const updatedProjects = { ...projects };
-        updatedProjects[newName] = updatedProjects[oldName];
-        delete updatedProjects[oldName];
+        updatedProjects[newName] = { ...updatedProjects[oldName], category: newCategory };
+        if (newName !== oldName) {
+            delete updatedProjects[oldName];
+        }
+
+        const categoryExists = categories.some(
+            cat => cat.toLowerCase() === newCategory.toLowerCase()
+        );
+        const updatedCategories = newCategory && !categoryExists
+            ? [...categories, newCategory]
+            : categories;
 
         // Update projects and currentProject together (before the await) so
         // there's never a render where currentProject points at a key that
         // no longer exists in projects.
         setProjects(updatedProjects);
+        setCategories(updatedCategories);
         if (currentProject === oldName) {
             setCurrentProject(newName);
         }
         setShowEditProject(false);
         setEditProjectName('');
+        setEditProjectCategory('');
 
-        await saveToFirebase(updatedProjects);
+        await saveToFirebase(updatedProjects, updatedCategories);
     };
 
     const deleteProject = async (projectName) => {
