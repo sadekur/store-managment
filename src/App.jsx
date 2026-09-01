@@ -398,21 +398,21 @@ const StoreManagementApp = () => {
                             {/* Desktop Layout (3 columns) */}
                             <div className="hidden sm:grid sm:grid-cols-3 gap-4 text-sm">
                                 <div className="flex flex-col space-y-1">
-                                    <span className="text-teal-600 font-medium">Total Income:</span>
+                                    <span className="text-teal-600 font-medium">Total Receive:</span>
                                     <span className="text-green-600 font-bold text-base lg:text-lg">
-                                        ${projectTotals.totalIncome.toLocaleString()}
+                                        {formatQuantity(projectTotals.totalIncome)}
                                     </span>
                                 </div>
                                 <div className="flex flex-col space-y-1">
-                                    <span className="text-teal-600 font-medium">Total Expenses:</span>
+                                    <span className="text-teal-600 font-medium">Total Issue:</span>
                                     <span className="text-red-600 font-bold text-base lg:text-lg">
-                                        ${projectTotals.totalExpenses.toLocaleString()}
+                                        {formatQuantity(projectTotals.totalExpenses)}
                                     </span>
                                 </div>
                                 <div className="flex flex-col space-y-1">
-                                    <span className="text-teal-600 font-medium">Net Balance:</span>
+                                    <span className="text-teal-600 font-medium">Total Stock:</span>
                                     <span className={`font-bold text-base lg:text-lg ${projectTotals.balance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                                        ${projectTotals.balance.toLocaleString()}
+                                        {formatQuantity(projectTotals.balance)}
                                     </span>
                                 </div>
                             </div>
@@ -420,21 +420,21 @@ const StoreManagementApp = () => {
                             {/* Mobile Layout (Stacked) */}
                             <div className="sm:hidden space-y-3">
                                 <div className="flex justify-between items-center border-b border-teal-200 pb-2">
-                                    <span className="text-teal-600 font-medium text-sm">Total Income:</span>
+                                    <span className="text-teal-600 font-medium text-sm">Total Receive:</span>
                                     <span className="text-green-600 font-bold text-base">
-                                        ${projectTotals.totalIncome.toLocaleString()}
+                                        {formatQuantity(projectTotals.totalIncome)}
                                     </span>
                                 </div>
                                 <div className="flex justify-between items-center border-b border-teal-200 pb-2">
-                                    <span className="text-teal-600 font-medium text-sm">Total Expenses:</span>
+                                    <span className="text-teal-600 font-medium text-sm">Total Issue:</span>
                                     <span className="text-red-600 font-bold text-base">
-                                        ${projectTotals.totalExpenses.toLocaleString()}
+                                        {formatQuantity(projectTotals.totalExpenses)}
                                     </span>
                                 </div>
                                 <div className="flex justify-between items-center">
-                                    <span className="text-teal-600 font-medium text-sm">Net Balance:</span>
+                                    <span className="text-teal-600 font-medium text-sm">Total Stock:</span>
                                     <span className={`font-bold text-base ${projectTotals.balance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                                        ${projectTotals.balance.toLocaleString()}
+                                        {formatQuantity(projectTotals.balance)}
                                     </span>
                                 </div>
                             </div>
