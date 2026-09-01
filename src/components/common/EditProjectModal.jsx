@@ -1,10 +1,15 @@
 // src/components/EditProjectModal.js
 import React from 'react';
+import CategoryPicker from './CategoryPicker';
 
 const EditProjectModal = ({
   show,
   projectName,
   setProjectName,
+  category,
+  setCategory,
+  existingCategories = [],
+  onDeleteCategory,
   onSave,
   onCancel
 }) => {
@@ -32,6 +37,13 @@ const EditProjectModal = ({
               required
             />
           </div>
+
+          <CategoryPicker
+            value={category}
+            onChange={setCategory}
+            existingCategories={existingCategories}
+            onDeleteCategory={onDeleteCategory}
+          />
 
           <div className="flex gap-3">
             <button
