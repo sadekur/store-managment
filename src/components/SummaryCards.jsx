@@ -1,7 +1,7 @@
 // src/components/SummaryCards.js
-import { CreditCard, DollarSign, Minus, TrendingDown, TrendingUp } from 'lucide-react';
+import { Minus, PackageMinus, PackagePlus, TrendingDown, TrendingUp } from 'lucide-react';
 import React from 'react';
-import { formatCurrency as formatCurrencyBase } from '../utils/format';
+import { formatQuantity as formatQuantityBase } from '../utils/format';
 
 const SummaryCards = ({
   totalIncome,
@@ -9,8 +9,8 @@ const SummaryCards = ({
   balance,
   year
 }) => {
-  const formatCurrency = (amount) =>
-    formatCurrencyBase(amount, { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  const formatQuantity = (amount) =>
+    formatQuantityBase(amount, { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 
   const getBalanceColor = (balance) => {
     if (balance > 0) return 'text-green-600';
