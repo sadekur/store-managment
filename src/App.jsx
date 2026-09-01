@@ -28,6 +28,7 @@ import DeleteConfirmationModal from './components/common/DeleteConfirmationModal
 import TransactionFormModal from './components/TransactionFormModal';
 import YearlySummaryScreen from './components/YearlySummaryScreen';
 import { getProjectYears, calculateTotals, calculateProjectTotals, getAvailableYears } from './utils/projectStats';
+import { formatQuantity } from './utils/format';
 
 // import { getDocs, collection } from "firebase/firestore";
 
