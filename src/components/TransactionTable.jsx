@@ -71,7 +71,7 @@ const TransactionTable = ({
               {type === "income" ? "Customer" : "Description"}
             </th>
             <th className="text-left p-1.5 xs:p-2 sm:p-3 font-medium text-gray-700 text-xs xs:text-sm">
-              Amount (৳)
+              Pieces
             </th>
             <th className="text-center p-1.5 xs:p-2 sm:p-3 font-medium text-gray-700 text-xs xs:text-sm w-16 xs:w-20">
               Actions
