@@ -492,7 +492,7 @@ const StoreManagementApp = () => {
                     show={showDeleteProjectConfirm}
                     onCancel={handleDeleteProjectCancel}
                     onConfirm={handleDeleteProjectConfirm}
-                    description={`Are you sure you want to delete "${currentProject}"? All of its income and expense records will be permanently deleted. This action cannot be undone.`}
+                    description={`Are you sure you want to delete "${currentProject}"? All of its stock in and stock out records will be permanently deleted. This action cannot be undone.`}
                 />
 
                 <TransactionFormModal
