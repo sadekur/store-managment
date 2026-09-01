@@ -1,5 +1,5 @@
 // src/components/AddProjectModal.js
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const AddProjectModal = ({
   show,
@@ -13,6 +13,19 @@ const AddProjectModal = ({
   onAdd,
   onCancel
 }) => {
+  const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
+  const categoryFieldRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (categoryFieldRef.current && !categoryFieldRef.current.contains(e.target)) {
+        setShowCategoryDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   if (!show) return null;
 
   const handleSubmit = (e) => {
@@ -26,6 +39,15 @@ const AddProjectModal = ({
   for (let year = currentYear - 10; year <= currentYear + 5; year++) {
     yearOptions.push(year);
   }
+
+  const filteredCategories = existingCategories.filter(cat =>
+    cat.toLowerCase().includes(category.trim().toLowerCase())
+  );
+
+  const handleSelectCategory = (cat) => {
+    setCategory(cat);
+    setShowCategoryDropdown(false);
+  };
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
@@ -44,23 +66,42 @@ const AddProjectModal = ({
               required
             />
           </div>
-          
-          <div className="mb-4">
+
+          <div className="mb-4 relative" ref={categoryFieldRef}>
             <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
             <input
               type="text"
               value={category}
-              onChange={(e) => setCategory(e.target.value)}
+              onChange={(e) => {
+                setCategory(e.target.value);
+                setShowCategoryDropdown(true);
+              }}
+              onFocus={() => setShowCategoryDropdown(true)}
               placeholder="Enter or select a category"
-              list="category-suggestions"
+              autoComplete="off"
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
               required
             />
-            <datalist id="category-suggestions">
-              {existingCategories.map(cat => (
-                <option key={cat} value={cat} />
-              ))}
-            </datalist>
+            {showCategoryDropdown && existingCategories.length > 0 && (
+              <div className="absolute z-10 mt-1 w-full max-h-40 overflow-y-auto bg-white border border-gray-300 rounded-lg shadow-lg">
+                {filteredCategories.length > 0 ? (
+                  filteredCategories.map(cat => (
+                    <button
+                      key={cat}
+                      type="button"
+                      onClick={() => handleSelectCategory(cat)}
+                      className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-teal-50"
+                    >
+                      {cat}
+                    </button>
+                  ))
+                ) : (
+                  <div className="px-3 py-2 text-sm text-gray-400">
+                    No matching category — it will be added as new
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           <div className="mb-4">
@@ -77,7 +118,7 @@ const AddProjectModal = ({
               ))}
             </select>
           </div>
-          
+
           <div className="flex gap-3">
             <button
               type="submit"
