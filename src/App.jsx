@@ -132,22 +132,24 @@ const StoreManagementApp = () => {
     };
 
     const addProject = async () => {
-        if (newProjectName.trim()) {
+        if (newProjectName.trim() && newProjectCategory.trim()) {
             const updatedProjects = {
                 ...projects,
                 [newProjectName.trim()]: {
                     income: {},
                     expenses: {},
+                    category: newProjectCategory.trim(),
                     createdAt: new Date().toISOString(),
                     createdYear: newProjectYear
                 }
             };
-            
+
             setProjects(updatedProjects);
             await saveToFirebase(updatedProjects);
             setCurrentProject(newProjectName.trim());
             setSelectedYear(newProjectYear);
             setNewProjectName('');
+            setNewProjectCategory('');
             setNewProjectYear(new Date().getFullYear());
             setShowAddProject(false);
         }
