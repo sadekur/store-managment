@@ -52,6 +52,7 @@ const StoreManagementApp = () => {
     const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
     const [projects, setProjects] = useState({});
     const [newProjectName, setNewProjectName] = useState('');
+    const [newProjectCategory, setNewProjectCategory] = useState('');
     const [showAddProject, setShowAddProject] = useState(false);
     const [showEditProject, setShowEditProject] = useState(false);
     const [editProjectName, setEditProjectName] = useState('');
