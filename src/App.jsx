@@ -57,6 +57,7 @@ const StoreManagementApp = () => {
     const [showAddProject, setShowAddProject] = useState(false);
     const [showEditProject, setShowEditProject] = useState(false);
     const [editProjectName, setEditProjectName] = useState('');
+    const [editProjectCategory, setEditProjectCategory] = useState('');
     const [showDeleteProjectConfirm, setShowDeleteProjectConfirm] = useState(false);
 
     // Transaction form state
