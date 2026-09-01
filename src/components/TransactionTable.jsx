@@ -100,7 +100,7 @@ const TransactionTable = ({
                   {transaction.donor}
                 </td>
                 <td className="p-1.5 xs:p-2 sm:p-3 font-medium text-xs xs:text-sm whitespace-nowrap">
-                  ৳{transaction.amount.toLocaleString("en-BD")}
+                  {transaction.amount.toLocaleString("en-BD")} pcs
                 </td>
                 <td className="p-1.5 xs:p-2 sm:p-3 text-center">
                   <button
@@ -123,10 +123,10 @@ const TransactionTable = ({
                 Total (this page):
               </td>
               <td className="p-1.5 xs:p-2 sm:p-3 text-xs xs:text-sm whitespace-nowrap">
-                ৳
                 {transactionList
                   .reduce((sum, t) => sum + t.amount, 0)
-                  .toLocaleString("en-BD")}
+                  .toLocaleString("en-BD")}{" "}
+                pcs
               </td>
               <td className="p-1.5 xs:p-2 sm:p-3"></td>
             </tr>
