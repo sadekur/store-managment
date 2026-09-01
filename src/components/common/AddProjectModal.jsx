@@ -1,5 +1,6 @@
 // src/components/AddProjectModal.js
 import React, { useEffect, useRef, useState } from 'react';
+import { X } from 'lucide-react';
 
 const AddProjectModal = ({
   show,
@@ -8,6 +9,7 @@ const AddProjectModal = ({
   category,
   setCategory,
   existingCategories = [],
+  onDeleteCategory,
   selectedYear,
   setSelectedYear,
   onAdd,
