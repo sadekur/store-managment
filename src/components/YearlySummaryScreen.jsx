@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar } from "lucide-react";
 import { useState } from "react";
-import { formatCurrency as formatCurrencyBase } from '../utils/format';
+import { formatQuantity as formatQuantityBase } from '../utils/format';
 import { getProjectYearKeys } from '../utils/projectStats';
 
 
