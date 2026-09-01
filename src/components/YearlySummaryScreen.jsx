@@ -184,19 +184,19 @@ return (
         {/* Summary Cards - Responsive Grid */}
         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 xs:gap-4 sm:gap-6 mb-6 xs:mb-8">
           <div className="bg-white rounded-lg shadow-sm p-3 xs:p-4 sm:p-6">
-            <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2">Total Income</h3>
+            <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2">Total Receive</h3>
             <p className="text-lg xs:text-xl sm:text-2xl font-bold text-green-600 break-words">
               {formatQuantity(grandTotals.income)}
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm p-3 xs:p-4 sm:p-6">
-            <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2">Total Expenses</h3>
+            <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2">Total Issue</h3>
             <p className="text-lg xs:text-xl sm:text-2xl font-bold text-red-600 break-words">
               {formatQuantity(grandTotals.expenses)}
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm p-3 xs:p-4 sm:p-6">
-            <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2">Net Balance</h3>
+            <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2">Total Stock</h3>
             <p className={`text-lg xs:text-xl sm:text-2xl font-bold break-words ${grandTotals.balance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
               {formatQuantity(grandTotals.balance)}
             </p>
@@ -240,15 +240,15 @@ return (
                         <div className="font-medium">{totals.totalTransactions}</div>
                       </div>
                       <div>
-                        <span className="text-gray-500">Income:</span>
+                        <span className="text-gray-500">Receive:</span>
                         <div className="font-medium text-green-600">{formatQuantity(totals.totalIncome)}</div>
                       </div>
                       <div>
-                        <span className="text-gray-500">Expenses:</span>
+                        <span className="text-gray-500">Issue:</span>
                         <div className="font-medium text-red-600">{formatQuantity(totals.totalExpenses)}</div>
                       </div>
                       <div className="col-span-2">
-                        <span className="text-gray-500">Net Balance:</span>
+                        <span className="text-gray-500">Total Stock:</span>
                         <div className={`font-medium text-base ${totals.balance >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                           {formatQuantity(totals.balance)}
                         </div>
