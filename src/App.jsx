@@ -85,6 +85,7 @@ const StoreManagementApp = () => {
                     if (docSnap.exists()) {
                         const data = docSnap.data();
                         setProjects(data.projects || {});
+                        setCategories(data.categories || []);
 
                         // Functional update — no stale closure on currentProject
                         setCurrentProject(prev => {
