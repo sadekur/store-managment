@@ -445,7 +445,7 @@ const StoreManagementApp = () => {
                             <div className="w-full">
                                 <TransactionSection
                                     type="income"
-                                    title={`Income (${selectedYear})`}
+                                    title={`Stock In (${selectedYear})`}
                                     addLabel={`Receive Product (${selectedYear})`}
                                     transactions={projects[currentProject]?.income?.[selectedYear.toString()] || {}}
                                     onDelete={(id) => deleteTransaction('income', id)}
@@ -457,7 +457,8 @@ const StoreManagementApp = () => {
                             <div className="w-full">
                                 <TransactionSection
                                     type="expense"
-                                    title={`Expenses (${selectedYear})`}
+                                    title={`Stock Out (${selectedYear})`}
+                                    addLabel={`Issue Product (${selectedYear})`}
                                     transactions={projects[currentProject]?.expenses?.[selectedYear.toString()] || {}}
                                     onDelete={(id) => deleteTransaction('expenses', id)}
                                     onAddTransaction={() => setShowExpenseForm(true)}
