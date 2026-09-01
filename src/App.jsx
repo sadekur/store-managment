@@ -349,7 +349,7 @@ const StoreManagementApp = () => {
     };
 
     const handleEditProjectSave = () => {
-        renameProject(currentProject, editProjectName);
+        renameProject(currentProject, editProjectName, editProjectCategory);
     };
 
     const handleDeleteProjectCancel = () => {
