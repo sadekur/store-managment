@@ -120,11 +120,12 @@ const StoreManagementApp = () => {
         };
     }, []); // ← empty array: runs only once, no stale listeners
 
-    const saveToFirebase = async (updatedProjects) => {
+    const saveToFirebase = async (updatedProjects, updatedCategories = categories) => {
         try {
             const storeDocRef = doc(db, 'stores', 'main-store');
             await setDoc(storeDocRef, {
                 projects: updatedProjects,
+                categories: updatedCategories,
                 lastUpdated: new Date().toISOString()
             }); // ← no merge:true — overwrites the document so deletes actually stick
             console.log('Data saved to Firebase successfully');
