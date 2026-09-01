@@ -296,11 +296,6 @@ const StoreManagementApp = () => {
         () => calculateProjectTotals(projects, currentProject),
         [projects, currentProject]
     );
-    const existingCategories = useMemo(
-        () => Array.from(new Set(Object.values(projects).map(p => p.category).filter(Boolean))).sort(),
-        [projects]
-    );
-
     // Handle project change - update year to most recent year with data
     const handleProjectChange = (newProject) => {
         setCurrentProject(newProject);
