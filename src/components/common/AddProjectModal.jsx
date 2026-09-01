@@ -96,14 +96,27 @@ const AddProjectModal = ({
               <div className="absolute z-10 mt-1 w-full max-h-40 overflow-y-auto bg-white border border-gray-300 rounded-lg shadow-lg">
                 {filteredCategories.length > 0 ? (
                   filteredCategories.map(cat => (
-                    <button
+                    <div
                       key={cat}
-                      type="button"
-                      onClick={() => handleSelectCategory(cat)}
-                      className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-teal-50"
+                      className="flex items-center justify-between hover:bg-teal-50"
                     >
-                      {cat}
-                    </button>
+                      <button
+                        type="button"
+                        onClick={() => handleSelectCategory(cat)}
+                        className="flex-1 text-left px-3 py-2 text-sm text-gray-700"
+                      >
+                        {cat}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={(e) => handleDeleteCategory(e, cat)}
+                        className="px-2 py-2 text-gray-400 hover:text-red-600"
+                        aria-label={`Delete category ${cat}`}
+                        title={`Delete category "${cat}"`}
+                      >
+                        <X size={14} />
+                      </button>
+                    </div>
                   ))
                 ) : (
                   <div className="px-3 py-2 text-sm text-gray-400">
