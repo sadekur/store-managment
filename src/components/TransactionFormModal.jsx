@@ -56,7 +56,7 @@ const TransactionFormModal = ({
           </div>
           
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Amount (৳)</label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">Quantity</label>
             <input
               type="number"
               value={formData.amount}
@@ -64,7 +64,7 @@ const TransactionFormModal = ({
               placeholder="Enter Quantity"
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
               min="0"
-              step="0.01"
+              step="1"
               required
             />
           </div>
