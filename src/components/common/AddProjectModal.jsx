@@ -42,13 +42,21 @@ const AddProjectModal = ({
     yearOptions.push(year);
   }
 
-  const filteredCategories = existingCategories.filter(cat =>
-    cat.toLowerCase().includes(category.trim().toLowerCase())
-  );
+  const filteredCategories = existingCategories
+    .filter(cat => cat.toLowerCase().includes(category.trim().toLowerCase()))
+    .sort((a, b) => a.localeCompare(b));
 
   const handleSelectCategory = (cat) => {
     setCategory(cat);
     setShowCategoryDropdown(false);
+  };
+
+  const handleDeleteCategory = (e, cat) => {
+    e.stopPropagation();
+    if (category === cat) {
+      setCategory('');
+    }
+    onDeleteCategory?.(cat);
   };
 
   return (
