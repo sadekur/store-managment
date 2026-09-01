@@ -84,17 +84,17 @@ return (
       <div className="flex items-start xs:items-center justify-between gap-3">
         <div className="flex-1 min-w-0">
           <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2 leading-tight">
-            Net Balance ({year})
+            Total Stock ({year})
           </h3>
           <p className={`text-lg xs:text-xl sm:text-2xl lg:text-3xl font-bold break-words leading-tight ${getBalanceColor(balance)}`}>
-            {formatCurrency(balance)}
+            {formatQuantity(balance)}
           </p>
           <div className="mt-1.5 xs:mt-2 flex items-center text-xs xs:text-sm">
             <span className="mr-1 flex-shrink-0">
               {getBalanceIcon(balance)}
             </span>
             <span className={`truncate ${getBalanceColor(balance)}`}>
-              {balance > 0 ? 'Surplus' : balance < 0 ? 'Deficit' : 'Break Even'}
+              {balance > 0 ? 'In Stock' : balance < 0 ? 'Out of Stock' : 'No Stock'}
             </span>
           </div>
         </div>
