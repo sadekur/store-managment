@@ -36,9 +36,11 @@ This is a single-tenant donation/expense tracker for "As-Salsabil Foundation," b
 **Auth**: Firebase Authentication gates the whole app — `LoginScreen` renders when there's no user, `LoadingScreen` while auth state is resolving. `src/firebase.js` exports `auth` and `db` (Firestore) from a single initialized Firebase app; config (including API key) is committed inline in that file, not via env vars.
 
 **Component structure** (`src/components/`):
-- `common/` — generic UI chrome (Header, Footer, LoadingScreen, AddProjectModal, DeleteConfirmationModal)
+- `common/` — generic UI chrome (Header, Footer, LoadingScreen, AddProjectModal, EditProjectModal, DeleteConfirmationModal)
 - Feature components at the top level (`ProjectControls`, `SummaryCards`, `TransactionSection`/`TransactionTable`, `TransactionFormModal`, `YearlySummaryScreen`, `SyncIndicator`, `LoginScreen`) — these implement search, sort, and pagination locally over the props they're given, not over a global store.
 
 `YearlySummaryScreen` is a separate full-screen view (toggled via `showYearlySummary` state in `App.jsx`, not a route) that aggregates totals across all years/projects.
+
+**`src/utils/`** holds the only logic extracted out of `App.jsx`: `projectStats.js` has pure, state-free helpers (`getProjectYears`, `calculateTotals`, `calculateProjectTotals`) for deriving income/expense totals from the `{ income, expenses }` shape described above, and `format.js` has `formatCurrency`. Prefer adding to these over duplicating totals math inline in components.
 
 Styling is Tailwind (see `tailwind.config.js`, `postcss.config.js`), with responsive variants used throughout (mobile-stacked vs. desktop-grid layouts appear side by side in the same component, e.g. the totals section in `App.jsx`).
