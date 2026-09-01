@@ -46,6 +46,24 @@ const AddProjectModal = ({
           </div>
           
           <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
+            <input
+              type="text"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              placeholder="Enter or select a category"
+              list="category-suggestions"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+              required
+            />
+            <datalist id="category-suggestions">
+              {existingCategories.map(cat => (
+                <option key={cat} value={cat} />
+              ))}
+            </datalist>
+          </div>
+
+          <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700 mb-2">Starting Year</label>
             <select
               value={selectedYear}
