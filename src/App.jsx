@@ -296,6 +296,7 @@ const StoreManagementApp = () => {
     const handleAddProjectCancel = () => {
         setShowAddProject(false);
         setNewProjectName('');
+        setNewProjectCategory('');
         setNewProjectYear(new Date().getFullYear());
     };
 
