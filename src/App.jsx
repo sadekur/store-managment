@@ -338,12 +338,14 @@ const StoreManagementApp = () => {
 
     const handleEditProjectOpen = () => {
         setEditProjectName(currentProject);
+        setEditProjectCategory(projects[currentProject]?.category || '');
         setShowEditProject(true);
     };
 
     const handleEditProjectCancel = () => {
         setShowEditProject(false);
         setEditProjectName('');
+        setEditProjectCategory('');
     };
 
     const handleEditProjectSave = () => {
