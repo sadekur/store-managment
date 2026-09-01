@@ -57,20 +57,20 @@ return (
       <div className="flex items-start xs:items-center justify-between gap-3">
         <div className="flex-1 min-w-0">
           <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2 leading-tight">
-            Total Expenses ({year})
+            Total Issue ({year})
           </h3>
           <p className="text-lg xs:text-xl sm:text-2xl lg:text-3xl font-bold text-red-600 break-words leading-tight">
-            {formatCurrency(totalExpenses)}
+            {formatQuantity(totalExpenses)}
           </p>
           {totalExpenses > 0 && (
             <div className="mt-1.5 xs:mt-2 flex items-center text-xs xs:text-sm text-red-600">
-              <CreditCard size={14} className="xs:w-4 xs:h-4 mr-1 flex-shrink-0" />
-              <span className="truncate">Total Spent</span>
+              <PackageMinus size={14} className="xs:w-4 xs:h-4 mr-1 flex-shrink-0" />
+              <span className="truncate">Stock Issued</span>
             </div>
           )}
         </div>
         <div className="p-2 xs:p-2.5 sm:p-3 bg-red-100 rounded-full flex-shrink-0">
-          <CreditCard size={18} className="xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-red-600" />
+          <PackageMinus size={18} className="xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-red-600" />
         </div>
       </div>
     </div>
