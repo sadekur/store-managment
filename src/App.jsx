@@ -530,6 +530,10 @@ const StoreManagementApp = () => {
                     show={showEditProject}
                     projectName={editProjectName}
                     setProjectName={setEditProjectName}
+                    category={editProjectCategory}
+                    setCategory={setEditProjectCategory}
+                    existingCategories={categories}
+                    onDeleteCategory={deleteCategory}
                     onSave={handleEditProjectSave}
                     onCancel={handleEditProjectCancel}
                 />
