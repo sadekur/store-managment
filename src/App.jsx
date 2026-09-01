@@ -136,20 +136,28 @@ const StoreManagementApp = () => {
     };
 
     const addProject = async () => {
-        if (newProjectName.trim() && newProjectCategory.trim()) {
+        const trimmedCategory = newProjectCategory.trim();
+        if (newProjectName.trim() && trimmedCategory) {
             const updatedProjects = {
                 ...projects,
                 [newProjectName.trim()]: {
                     income: {},
                     expenses: {},
-                    category: newProjectCategory.trim(),
+                    category: trimmedCategory,
                     createdAt: new Date().toISOString(),
                     createdYear: newProjectYear
                 }
             };
+            const categoryExists = categories.some(
+                cat => cat.toLowerCase() === trimmedCategory.toLowerCase()
+            );
+            const updatedCategories = categoryExists
+                ? categories
+                : [...categories, trimmedCategory];
 
             setProjects(updatedProjects);
-            await saveToFirebase(updatedProjects);
+            setCategories(updatedCategories);
+            await saveToFirebase(updatedProjects, updatedCategories);
             setCurrentProject(newProjectName.trim());
             setSelectedYear(newProjectYear);
             setNewProjectName('');
@@ -157,6 +165,12 @@ const StoreManagementApp = () => {
             setNewProjectYear(new Date().getFullYear());
             setShowAddProject(false);
         }
+    };
+
+    const deleteCategory = async (categoryToDelete) => {
+        const updatedCategories = categories.filter(cat => cat !== categoryToDelete);
+        setCategories(updatedCategories);
+        await saveToFirebase(projects, updatedCategories);
     };
 
     const renameProject = async (oldName, newNameRaw) => {
