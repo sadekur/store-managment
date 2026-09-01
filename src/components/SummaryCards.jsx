@@ -33,20 +33,20 @@ return (
       <div className="flex items-start xs:items-center justify-between gap-3">
         <div className="flex-1 min-w-0">
           <h3 className="text-xs xs:text-sm font-medium text-gray-500 mb-1 xs:mb-2 leading-tight">
-            Total Income ({year})
+            Total Receive ({year})
           </h3>
           <p className="text-lg xs:text-xl sm:text-2xl lg:text-3xl font-bold text-green-600 break-words leading-tight">
-            {formatCurrency(totalIncome)}
+            {formatQuantity(totalIncome)}
           </p>
           {totalIncome > 0 && (
             <div className="mt-1.5 xs:mt-2 flex items-center text-xs xs:text-sm text-green-600">
-              <DollarSign size={14} className="xs:w-4 xs:h-4 mr-1 flex-shrink-0" />
-              <span className="truncate">Revenue Generated</span>
+              <PackagePlus size={14} className="xs:w-4 xs:h-4 mr-1 flex-shrink-0" />
+              <span className="truncate">Stock Received</span>
             </div>
           )}
         </div>
         <div className="p-2 xs:p-2.5 sm:p-3 bg-green-100 rounded-full flex-shrink-0">
-          <DollarSign size={18} className="xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-green-600" />
+          <PackagePlus size={18} className="xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-green-600" />
         </div>
       </div>
     </div>
