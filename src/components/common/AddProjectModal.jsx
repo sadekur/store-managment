@@ -1,14 +1,17 @@
 // src/components/AddProjectModal.js
 import React from 'react';
 
-const AddProjectModal = ({ 
-  show, 
-  projectName, 
-  setProjectName, 
+const AddProjectModal = ({
+  show,
+  projectName,
+  setProjectName,
+  category,
+  setCategory,
+  existingCategories = [],
   selectedYear,
   setSelectedYear,
-  onAdd, 
-  onCancel 
+  onAdd,
+  onCancel
 }) => {
   if (!show) return null;
 
